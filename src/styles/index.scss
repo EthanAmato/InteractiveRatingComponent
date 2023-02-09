@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Overpass', sans-serif;
+}
+
+button {
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #141519;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 25em;
+    background-color: #1E252F;
+    border-radius: 2em;
+    padding: 2em;
+    div.star {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #262F38;
+        width: 1em;
+        height: 1em;
+        padding: .5em;
+        font-size: 1.3em;
+        border-radius: 50%;
+        color: #FC790B;
+    }
+    p {
+        color: hsl(217, 12%, 63%);
+        line-height: 2em;
+    }
+
+    div.button-wrapper {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        input[type='radio'][name='buttonGroup'] { display:none; }
+
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4em;
+            height: 4em;
+            background-color: #262F38;
+            color: hsl(217, 12%, 63%);
+            font-size: 1em;
+            font-weight: 700;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            transition: all .5s ease-in-out;
+            &:hover {
+                background-color: hsl(0, 0%, 100%);
+                color: #FC790B;
+            }
+        }
+
+        input[type='radio']:checked + label.button {
+            background-color: #7c8898;
+            color: white;
+        }
+
+    
+    }
+
+      
+    .submit {
+        margin-top: 2em;
+        width: 100%;
+        padding: 1em;
+        border-radius: 2em;
+        color: white;
+        font-size: 1em;
+        font-weight: 700;
+        letter-spacing: .2em;
+        background-color: #FC790B;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: hsl(0, 0%, 100%);
+            color: #FC790B;
+        }
+    }
+    
+
+    
+}
+
+.container.feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p, h1 {
+        text-align: center;
+    }
+    p:first-of-type {
+        color: #FC790B;
+        background-color:#262F38;
+        padding: 0 1em 0 1em;
+        border-radius: 2em;
+    }
+    h1 {
+        margin: 0;
+    }
+    p:last-of-type {
+        margin: 0;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    p{
+        margin: 0;
+        color: #7c8898;
+        text-align: center;
+        text-decoration: none;
+    }
+    a {
+        color: #FC790B;
+    }
+}
+
+.selected {
+    background-color: hsl(217, 12%, 63%);
+}
